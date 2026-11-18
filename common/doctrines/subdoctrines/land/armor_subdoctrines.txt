@@ -11,11 +11,6 @@ armor_doctrine_1 = {
         always = yes
     }
 
-	visible = {
-		NOT = {
-			has_subdoctrine_in_track = armor
-		}
-	}
 
     category_tanks = {
         breakthrough = 0.1
@@ -192,11 +187,6 @@ armor_doctrine_2 = {
         always = yes
     }
 
-	visible = {
-		NOT = {
-			has_subdoctrine_in_track = armor
-		}
-	}
 
     category_tanks = {
         breakthrough = 0.05
@@ -206,37 +196,37 @@ armor_doctrine_2 = {
     }
     light_armor = {
         need = {
-            light_tank_chassis = -4
+            light_tank_chassis = -6
         }
     }
     medium_armor = {
         need = {
-            medium_tank_chassis = -4
+            medium_tank_chassis = -6
         }
     }
     heavy_armor = {
         need = {
-            heavy_tank_chassis = -4
+            heavy_tank_chassis = -6
         }
     }
     super_heavy_armor = {
         need = {
-            super_heavy_tank_chassis = -4
+            super_heavy_tank_chassis = -6
         }
     }
     amphibious_light_armor = {
         need = {
-            light_tank_amphibious_chassis = -4
+            light_tank_amphibious_chassis = -6
         }
     }
     amphibious_medium_armor = {
         need = {
-            medium_tank_amphibious_chassis = -4
+            medium_tank_amphibious_chassis = -6
         }
     }
     amphibious_heavy_armor = {
         need = {
-            heavy_tank_amphibious_chassis = -4
+            heavy_tank_amphibious_chassis = -6
         }
     }
     effect = {
@@ -332,11 +322,11 @@ armor_doctrine_2 = {
         e = {
             category_tanks = {
                 breakthrough = 0.1
-                soft_attack = 0.05
+                soft_attack = 0.1
             }
             category_tank_variants = {
                 breakthrough = 0.1
-                soft_attack = 0.05
+                soft_attack = 0.1
             }
         }
     }
@@ -354,11 +344,6 @@ armor_doctrine_3 = {
         always = yes
     }
 
-	visible = {
-		NOT = {
-			has_subdoctrine_in_track = armor
-		}
-	}
 
     category_tanks = {
         max_organisation = 5
