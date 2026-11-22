@@ -427,6 +427,15 @@
  atrocket1_tech: "Ground Attack Rockets"
  atrocket1_tech_desc: ""
 
+ factoryoptimization1_tech: "Basic Factory Optimization"
+ factoryoptimization1_tech_desc: ""
+ factoryoptimization2_tech: "Improved Factory Optimization"
+ factoryoptimization2_tech_desc: ""
+ factoryoptimization3_tech: "Advanced Factory Optimization"
+ factoryoptimization3_tech_desc: ""
+ factoryoptimization4_tech: "Modern Factory Optimization"
+ factoryoptimization4_tech_desc: ""
+
  #TPMP Categories
  cat_infantry_tech: "Infantry Technology"
  cat_infantry_gun_tech: "Infantry Gun Technology"
@@ -493,6 +502,8 @@
  cat_heavy_turret_tech: "Heavy Turret Technology"
  cat_super_heavy_chassis_tech: "Super-Heavy Tank Chassis Technology"
  cat_super_heavy_turret_tech: "Super-Heavy Turret Technology"
+
+ cat_factory_optimization_tech: "Factory Optimization Technology"
 
  cat_special_project_tech: "Special Project Technology"
 

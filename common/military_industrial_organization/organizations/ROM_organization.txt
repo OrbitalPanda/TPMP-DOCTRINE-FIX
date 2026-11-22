@@ -1,107 +1,131 @@
-#####################
+# TPMP MIOs of ROM. Each is a country copy of a generic archetype (include) with its own name and icon.
+# The trait trees live in the TPMP_generic_*_organizations.txt files.
 
- ## #  # ### ###   ## 
-#   #  #  #  #  # #   
- #  ####  #  ###   #  
-  # #  #  #  #      # 
-##  #  # ### #    ##  
- 
-#####################
+### Tanks ###
 
-ROM_constanta_shipyard_organization = {
-	include = generic_task_force_ship_organization
-	icon = GFX_idea_ROM_constanta_shipyard
-	allowed = { 
-		tag = ROM
-	}
-}
+ROM_atelierele_leonida_organization = {
+	include = TPMP_generic_firepower_tank_organization
+	icon = GFX_idea_ROM_leonidas_works
 
-ROM_galati_shipyard_organization = {
-	include = generic_raider_ship_organization
-	icon = GFX_idea_generic_coastal_navy
 	allowed = {
-		tag = ROM
-	}
-	available = {
-		FROM = { has_completed_focus = TPMP_ROM_expand_galati_shipyards }
-	}
-	initial_trait = {
-		name = ROM_mio_trait_coastal_defense_production
-		limit_to_equipment_type = { mio_cat_eq_all_cruiser }
-		production_bonus = {
-			production_cost_factor = -0.05
-		}
-		equipment_bonus = {
-			lg_attack = 0.05
-			naval_range = -0.1
-		}
+		original_tag = ROM
 	}
 }
 
-ROM_Braila_organization = {
-	include = generic_battle_line_ship_organization
-	icon = GFX_idea_generic_sea_focused_navy
+ROM_malaxa_organization = {
+	include = TPMP_generic_production_tank_organization
+	icon = GFX_idea_ROM_malaxa_train
+
 	allowed = {
-		tag = ROM
-	}
-	available = {
-		FROM = { has_completed_focus = TPMP_ROM_expand_galati_shipyards }
+		original_tag = ROM
 	}
 }
 
-###########################
+### Infantry ###
 
-###  #    ##  #  # ###  ## 
-#  # #   #  # ## # #   #   
-###  #   #### # ## ##   #  
-#    #   #  # #  # #     # 
-#    ### #  # #  # ### ##  
+ROM_cugir_small_arms_organization = {
+	include = TPMP_generic_standard_infantry_organization
+	icon = GFX_idea_ROM_cugir
 
-###########################
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+ROM_malaxa_brasov_organization = {
+	include = TPMP_generic_production_infantry_organization
+	icon = GFX_idea_ROM_malaxa
+
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+### Artillery ###
+
+ROM_resita_works_organization = {
+	include = TPMP_generic_standard_artillery_organization
+	icon = GFX_idea_ROM_resita
+
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+ROM_firepower_artillery_organization = {
+	include = TPMP_generic_firepower_artillery_organization
+
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+ROM_astra_works_organization = {
+	include = TPMP_generic_production_artillery_organization
+
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+### Mechanized ###
+
+ROM_ford_motor_company_organization = {
+	include = TPMP_generic_light_mechanized_organization
+	icon = GFX_idea_ford_motor_company
+
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+### Aircraft ###
 
 ROM_iar_organization = {
-	include = generic_light_aircraft_organization
+	include = TPMP_generic_agility_aircraft_organization
 	icon = GFX_idea_ROM_iar
-	allowed = { 
-		tag = ROM
-	}
-	available = {
-		FROM = { has_completed_focus = TPMP_ROM_trust_in_iar }
-	}
 
-	add_trait = {
-		token = generic_mio_trait_heavily_armed_aircraft
-		name = generic_mio_trait_heavily_armed_aircraft
-		icon = GFX_generic_mio_department_icon_plane_fighter_combat
-
-		position = { x=2 y=0 }
-		relative_position_id = generic_mio_trait_advanced_aerodynamics
-
-		available = {
-			FROM = { has_completed_focus = TPMP_ROM_trust_in_iar }
-		}
-
-		equipment_bonus = {
-			air_attack = 0.05
-			air_ground_attack = 0.05
-		}
+	allowed = {
+		original_tag = ROM
 	}
 }
 
 ROM_icar_organization = {
-	include = generic_general_aircraft_organization
+	include = TPMP_generic_range_aircraft_organization
 	icon = GFX_idea_ROM_ICAR
-	allowed = { 
-		tag = ROM
-		has_dlc = "Death or Dishonor"
+
+	allowed = {
+		original_tag = ROM
 	}
 }
 
 ROM_set_organization = {
-	include = generic_naval_aircraft_organization
+	include = TPMP_generic_support_aircraft_organization
 	icon = GFX_idea_ROM_SET
-	allowed = { 
-		tag = ROM
-		has_dlc = "Death or Dishonor"
+
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+### Ships ###
+
+ROM_constanta_shipyard_organization = {
+	include = TPMP_generic_escort_ship_organization
+	icon = GFX_idea_ROM_constanta_shipyard
+
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+### Support ###
+
+ROM_caile_ferate_romane_organization = {
+	include = TPMP_generic_support_organization
+	icon = GFX_idea_ROM_CFR_idea
+
+	allowed = {
+		original_tag = ROM
 	}
 }

@@ -1,178 +1,140 @@
-#####################
+# TPMP MIOs of FRA. Each is a country copy of a generic archetype (include) with its own name and icon.
+# The trait trees live in the TPMP_generic_*_organizations.txt files.
 
- ## #  # ### ###   ## 
-#   #  #  #  #  # #   
- #  ####  #  ###   #  
-  # #  #  #  #      # 
-##  #  # ### #    ##  
- 
-#####################
+### Tanks ###
 
-FRA_fcm_organization = {
-	include = generic_escort_ship_organization
-	icon = GFX_idea_fcm
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
-	}
-}
+FRA_somua_organization = {
+	include = TPMP_generic_standard_tank_organization
+	icon = GFX_idea_somua
 
-FRA_aeb_organization = {
-	include = generic_task_force_ship_organization
-	icon = GFX_idea_FRA_aeb
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
-	}
-}
-
-FRA_acl_organization = {
-	include = generic_battle_line_ship_organization
-	icon = GFX_idea_FRA_acl
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
-	}
-}
-
-FRA_acf_organization = {
-	include = generic_raider_ship_organization
-	icon = GFX_idea_FRA_acf
 	allowed = {
-		has_dlc = "Arms Against Tyranny"
-		OR = {
-			tag = FRA
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
-		}
-	}
-	available = {
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = FRA } }
-			}
-			FROM = { NOT = { has_war_with = FRA } }
-		}
-		IF = {
-			limit = { FROM = { original_tag = BRA } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
-					has_country_flag = has_acf_mio_flag
-				}
-			}
-		}
+		original_tag = FRA
 	}
 }
 
-###########################
+FRA_apx_organization = {
+	include = TPMP_generic_firepower_tank_organization
+	icon = GFX_idea_FRA_atelier_puteaux
 
-###  #    ##  #  # ###  ## 
-#  # #   #  # ## # #   #   
-###  #   #### # ## ##   #  
-#    #   #  # #  # #     # 
-#    ### #  # #  # ### ##  
+	allowed = {
+		original_tag = FRA
+	}
+}
 
-###########################
+FRA_renault_organization = {
+	include = TPMP_generic_assault_tank_organization
+	icon = GFX_idea_renault
+
+	allowed = {
+		original_tag = FRA
+	}
+}
+
+### Infantry ###
+
+FRA_mas_organization = {
+	include = TPMP_generic_standard_infantry_organization
+	icon = GFX_idea_mas
+
+	allowed = {
+		original_tag = FRA
+	}
+}
+
+FRA_advanced_infantry_organization = {
+	include = TPMP_generic_advanced_infantry_organization
+
+	allowed = {
+		original_tag = FRA
+	}
+}
+
+### Artillery ###
+
+FRA_schneider_organization = {
+	include = TPMP_generic_standard_artillery_organization
+	icon = GFX_idea_schneider
+
+	allowed = {
+		original_tag = FRA
+	}
+}
+
+FRA_famh_organization = {
+	include = TPMP_generic_firepower_artillery_organization
+	icon = GFX_idea_famh
+
+	allowed = {
+		original_tag = FRA
+	}
+}
+
+### Mechanized ###
+
+FRA_panhard_organization = {
+	include = TPMP_generic_light_mechanized_organization
+	icon = GFX_idea_FRA_panhard
+
+	allowed = {
+		original_tag = FRA
+	}
+}
+
+FRA_heavy_mechanized_organization = {
+	include = TPMP_generic_heavy_mechanized_organization
+
+	allowed = {
+		original_tag = FRA
+	}
+}
+
+### Aircraft ###
 
 FRA_morane_saulnier_organization = {
-	include = generic_light_aircraft_organization
+	include = TPMP_generic_agility_aircraft_organization
 	icon = GFX_idea_morane_saulnier
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
-	}
-}
 
-FRA_bloch_organization = {
-	include = generic_medium_aircraft_organization
-	icon = GFX_idea_bloch
-	allowed = {	
-		OR = {
-			tag = FRA 
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
-		}
-	}
-
-	visible = {
-		IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
-		}
-	}
-	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = FRA } }
-			}
-			FROM = { NOT = { has_war_with = FRA } }
-		}
-
-		IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_FRA_bloch_organization_flag
-				}
-			}
-		}
-		IF = {
-			limit = { FROM = { original_tag = BRA } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
-					has_country_flag = has_bloch_mio_flag
-				}
-			}
-		}
+	allowed = {
+		original_tag = FRA
 	}
 }
 
 FRA_amiot_organization = {
-	include = generic_heavy_aircraft_organization
+	include = TPMP_generic_support_aircraft_organization
 	icon = GFX_idea_amiot
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+
+	allowed = {
+		original_tag = FRA
 	}
 }
 
-FRA_levasseur_organization = {
-	include = generic_naval_aircraft_organization
-	icon = GFX_idea_levasseur
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+### Ships ###
+
+FRA_acl_organization = {
+	include = TPMP_generic_battlefleet_ship_organization
+	icon = GFX_idea_FRA_acl
+
+	allowed = {
+		original_tag = FRA
 	}
 }
 
-FRA_SNCAC_organization = {
-	name = SNCAC
-	include = generic_general_aircraft_organization
-	icon = GFX_idea_FRA_sncac
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+FRA_acf_organization = {
+	include = TPMP_generic_raiding_ship_organization
+	icon = GFX_idea_FRA_acf
+
+	allowed = {
+		original_tag = FRA
 	}
-	visible = {
-		FROM = { has_country_flag = FRA_SNCAC_formed }
+}
+
+### Support ###
+
+FRA_alsthom_organization = {
+	include = TPMP_generic_support_organization
+	icon = GFX_idea_FRA_alsthom
+
+	allowed = {
+		original_tag = FRA
 	}
 }

@@ -1,80 +1,128 @@
-#####################
+# TPMP MIOs of CAN. Each is a country copy of a generic archetype (include) with its own name and icon.
+# The trait trees live in the TPMP_generic_*_organizations.txt files.
 
- ## #  # ### ###   ## 
-#   #  #  #  #  # #   
- #  ####  #  ###   #  
-  # #  #  #  #      # 
-##  #  # ### #    ##  
- 
-#####################
+### Tanks ###
 
-CAN_kingston_shipbuilding_organization = {
-	name = CAN_kingston_shipbuilding_organization
-	include = generic_task_force_ship_organization
-	icon = GFX_idea_kingston_shipbuilding
+CAN_vickers_armstrong_organization = {
+	include = TPMP_generic_standard_tank_organization
+	icon = GFX_idea_vickers_armstrong_can
+
 	allowed = {
-		original_TAG = CAN
+		original_tag = CAN
 	}
 }
 
-CAN_halifax_shipyard_organization = {
-	name = CAN_halifax_shipyard_organization
-	include = generic_escort_ship_organization
-	icon = GFX_idea_halifax_shipyard
+CAN_production_tank_organization = {
+	include = TPMP_generic_production_tank_organization
+
 	allowed = {
-		original_TAG = CAN
+		original_tag = CAN
 	}
 }
 
-###########################
+### Infantry ###
 
-###  #    ##  #  # ###  ## 
-#  # #   #  # ## # #   #   
-###  #   #### # ## ##   #  
-#    #   #  # #  # #     # 
-#    ### #  # #  # ### ##  
+CAN_small_arms_limited_organization = {
+	include = TPMP_generic_standard_infantry_organization
+	icon = GFX_idea_small_arms_limited
 
-###########################
-CAN_de_havilland_organization = {
-	name = CAN_de_havilland_organization
-	include = generic_medium_aircraft_organization
-	icon = GFX_idea_de_havilland
 	allowed = {
-		original_TAG = CAN
+		original_tag = CAN
 	}
 }
+
+CAN_john_inglis_and_company_organization = {
+	include = TPMP_generic_advanced_infantry_organization
+	icon = GFX_idea_inglis_company
+
+	allowed = {
+		original_tag = CAN
+	}
+}
+
+### Artillery ###
+
+CAN_standard_artillery_organization = {
+	include = TPMP_generic_standard_artillery_organization
+
+	allowed = {
+		original_tag = CAN
+	}
+}
+
+### Mechanized ###
+
+CAN_light_mechanized_organization = {
+	include = TPMP_generic_light_mechanized_organization
+
+	allowed = {
+		original_tag = CAN
+	}
+}
+
+CAN_heavy_mechanized_organization = {
+	include = TPMP_generic_heavy_mechanized_organization
+
+	allowed = {
+		original_tag = CAN
+	}
+}
+
+### Aircraft ###
 
 CAN_canadian_car_foundry_organization = {
-	name = CAN_canadian_car_foundry_organization
-	include = generic_light_aircraft_organization
+	include = TPMP_generic_agility_aircraft_organization
 	icon = GFX_idea_canadian_car_foundry
+
 	allowed = {
-		original_TAG = CAN
+		original_tag = CAN
+	}
+}
+
+CAN_de_havilland_organization = {
+	include = TPMP_generic_range_aircraft_organization
+	icon = GFX_idea_de_havilland
+
+	allowed = {
+		original_tag = CAN
 	}
 }
 
 CAN_fairchild_aircraft_ltd_organization = {
-	name = CAN_fairchild_aircraft_ltd_organization
-	include = generic_naval_aircraft_organization
-	icon = GFX_idea_generic_air_manufacturer_2
+	include = TPMP_generic_support_aircraft_organization
+
 	allowed = {
-		original_TAG = CAN
-		has_dlc = "Together for Victory"
-	}
-	available = {
-		owner = { has_completed_focus = CAN_fund_fairchilds_development }
+		original_tag = CAN
 	}
 }
 
-CAN_handley_page_organization = {
-	name = CAN_handley_page_organization
-	include = generic_heavy_aircraft_organization
-	icon = GFX_idea_generic_air_manufacturer_3
+### Ships ###
+
+CAN_kingston_shipbuilding_co_organization = {
+	include = TPMP_generic_carrier_ship_organization
+	icon = GFX_idea_kingston_shipbuilding
+
 	allowed = {
-		original_TAG = CAN
-		has_dlc = "Together for Victory"
+		original_tag = CAN
 	}
-	available = {
-		owner = { has_completed_focus = CAN_cookie_carriers }
+}
+
+CAN_halifax_shipyard_limited_organization = {
+	include = TPMP_generic_escort_ship_organization
+	icon = GFX_idea_halifax_shipyard
+
+	allowed = {
+		original_tag = CAN
+	}
+}
+
+### Support ###
+
+CAN_canadian_pacific_railway_organization = {
+	include = TPMP_generic_support_organization
+	icon = GFX_idea_CAN_canadian_pacific_railway
+
+	allowed = {
+		original_tag = CAN
 	}
 }
